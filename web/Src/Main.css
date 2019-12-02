@@ -1,0 +1,237 @@
+
+body {
+    background-color: #F0F0F7;
+}
+
+.logo_p {
+    display: inline;
+    width: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+    color: white;
+    font-size: 20pt;
+}
+.main_div {
+    position: relative;
+}
+
+.nav {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+.btn-purple {
+    color: white;
+    border-radius: 5px;
+    background-color: #43425D;
+    border: 0;
+    outline: 0;
+}
+
+.panel_content {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.panel_current {
+    width: 100%;
+    background-color: #3C3A54;
+}
+
+.panel_item {
+    position: inherit;
+    width: 100%;
+    height: 45px;
+}
+
+.panel_img {
+    width: 16px;
+    height: 16px;
+    margin-top: 14px;
+    margin-left: 20px;
+    display: inline;
+    float: left;
+}
+
+div.indicator {
+    width: 5px;
+    height: 45px;
+    background-color: #A3A0FB;
+    display: inline;
+    float: left;
+    visibility: hidden;
+}
+
+label.panel_text {
+    float: left;
+    color: white;
+    margin-left: 10px;
+    height: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline;
+    vertical-align: middle;
+}
+
+span.more {
+    float: right;
+}
+
+.divider {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    padding-top: 3px;
+    padding-left: 25px;
+    background-color: #333333;
+    color: white;
+}
+
+p.notice_line {
+    margin: 0px;
+}
+p.time {
+    color: #3B86FF;
+    background-color: #F5F6FA;
+    text-align: right;
+    padding: 5px;
+}
+
+/*
+   확장 가능한 패널 사이드
+ */
+.extend_div {
+    background-color: #272640;
+}
+
+.extend_div_content {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding-left: 30px;
+}
+/*
+모바일
+ */
+@media (max-width: 767px) {
+    .panel {
+        display: none;
+        background-color: #43425D;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .main {
+        position: relative;
+        padding: 15px 15px 15px 15px;
+    }
+
+    .logo_div {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        clear: both;
+        padding: 10px;
+        background-color: #E4E4E4;
+    }
+    .bottom_div {
+
+    }
+
+    .card_helf {
+        margin-top: 20px;
+        width: 100%;
+        position: relative;
+    }
+
+    .create_btn {
+        width: 100%;
+    }
+
+    #account_div {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+/*
+데스크탑
+ */
+@media (min-width: 768px) {
+    .panel {
+        background-color: #43425D;
+        width: 250px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+
+    .main {
+        position: relative;
+        top: 0px;
+        margin-left: 250px;
+        padding: 15px 15px 15px 15px;
+    }
+
+    .logo_main {
+        position: relative;
+        top: 10px;
+        left: 50%;
+        display: inline;
+        text-align: center;
+    }
+
+    .logo_div {
+        background-color: #3C3A54;
+        width: 100%;
+        height: 60px;
+    }
+
+    footer {
+        width: 100%;
+        background-color: #E4E4E4;
+        position: absolute;
+        padding-left: 260px;
+        padding-top: 20px;
+        height: 100px;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .bottom_div {
+
+        display: inline;
+    }
+
+    .card_helf {
+        margin-top: 20px;
+        width: 49.5%;
+        height: 250px;
+        display: inline;
+        float: left;
+        position: relative;
+    }
+
+    .create_btn {
+        display: inline;
+        float: right;
+        right: 20px;
+        margin-top: -50px
+    }
+
+    #login_m {
+        display: none;
+    }
+
+    .register_div {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}

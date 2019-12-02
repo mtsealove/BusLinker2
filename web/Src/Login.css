@@ -1,0 +1,80 @@
+.login_content {
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.logo_text {
+    color: #43425D;
+    margin-bottom: 60px;
+}
+
+.under_line {
+    border: 0;
+    border-bottom: 2.5px solid #E9E9F0;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+.login_btn {
+    width: 100%;
+    height: 40px;
+}
+@media(max-width: 599px) {
+    .login_right {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/login_back.png");
+    }
+
+    .login_left {
+        display: none;
+    }
+
+    .login_content {
+        position: relative;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+        background-color: white;
+        top: 50%;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .login_left {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-image: url("../images/login_back.png");
+    }
+    .login_right {
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-color: white;
+    }
+
+    .login_content {
+        position: relative;
+        top: 50%;
+        padding-left: 225px;
+        padding-right: 225px;
+        text-align: center;
+    }
+}
