@@ -162,7 +162,7 @@
         <div id="register_div" class="extend_div">
             <div class="extend_div_content" data-page="ManagerRegisterOwner.jsp"><label class="panel_text">화주사
                 등록</label></div>
-            <div class="extend_div_content"><label class="panel_text">운수사업자 등록</label></div>
+            <div class="extend_div_content" data-page="ManagerRegisterCompany.jsp"><label class="panel_text">운수사업자 등록</label></div>
             <div class="extend_div_content"><label class="panel_text">물류센터 등록</label></div>
             <div class="extend_div_content"><label class="panel_text">물류관리 직원 등록</label></div>
         </div>
