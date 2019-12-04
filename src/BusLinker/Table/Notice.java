@@ -1,4 +1,4 @@
-package BusLinker;
+package BusLinker.Table;
 
 public class Notice {
     int NoticeID;

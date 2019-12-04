@@ -1,10 +1,8 @@
-package BusLinker;
+package BusLinker.Table;
 
 import BusLinker.Database.DbConn;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import BusLinker.Table.Notice;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=utf-8" language="java" %>
+<%
+    String dir_nav=request.getContextPath();
+
+%>
 <script>
     $(function () {
         $('#login_btn').click(function () {
@@ -25,7 +29,7 @@
 </script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light nav">
     <div>
-        <img src="images/logo.png" id="app_icon" width="40" height="40">
+        <img src="<%=dir_nav%>/images/logo.png" id="app_icon" width="40" height="40">
         <a class="navbar-brand" href="#" style="height: 40px; vertical-align: middle;"><b>BusLinker</b></a></div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     </div>

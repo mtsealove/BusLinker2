@@ -1,5 +1,5 @@
-<%@ page import="BusLinker.Notice" %>
-<%@ page import="BusLinker.NoticeManager" %><%--
+<%@ page import="BusLinker.Table.Notice" %>
+<%@ page import="BusLinker.Table.NoticeManager" %><%--
   Created by IntelliJ IDEA.
   User: isanhae
   Date: 2019/12/02

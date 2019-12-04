@@ -10,13 +10,10 @@
 <%@page import="java.util.Enumeration" %>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@page import="com.oreilly.servlet.MultipartRequest" %>
-<%@ page import="BusLinker.Table.NoticeManager" %>
+<%@ page import="BusLinker.Account" %>
 <%
     request.setCharacterEncoding("euc-kr");
-    String memberID = session.getAttribute("userID").toString();
-    System.out.println(memberID);
-
-    String uploadPath = request.getRealPath("/uploadFile");
+    String uploadPath = request.getRealPath("/CompanyFile");
     System.out.println("절대경로 : " + uploadPath);
 
     int maxSize = 1024 * 1024 * 10; // 한번에 올릴 수 있는 파일 용량 : 10M로 제한
@@ -25,9 +22,7 @@
     String originalName1 = ""; // 중복 처리전 실제 원본 이름
     long fileSize = 0; // 파일 사이즈
     String fileType = ""; // 파일 타입
-
-    String title = "", content = "";
-    int noticeID=-1;
+    String Name = "", BusinessNum = "", BusinessAddr = "", CenterAddr = "", Contact = "", Mail = "", Password = "";
 
     MultipartRequest multi = null;
 
@@ -35,11 +30,14 @@
         // request,파일저장경로,용량,인코딩타입,중복파일명에 대한 기본 정책
         multi = new MultipartRequest(request, uploadPath, maxSize, "utf-8", new DefaultFileRenamePolicy());
 
-        title = multi.getParameter("title");
-        content = multi.getParameter("content");
-        noticeID = Integer.parseInt(multi.getParameter("notice_id"));
-        System.out.println(title);
-        System.out.println(content);
+        //DB에 저장할 데이터
+        Name = multi.getParameter("Name");
+        BusinessNum = multi.getParameter("BusinessNum");
+        BusinessAddr = multi.getParameter("BusinessAddr");
+        CenterAddr = multi.getParameter("CenterAddr");
+        Contact = multi.getParameter("Contact");
+        Mail = multi.getParameter("Mail");
+        Password = multi.getParameter("Password");
 
         // 전송한 전체 파일이름들을 가져옴
         Enumeration files = multi.getFileNames();
@@ -59,21 +57,11 @@
     } catch (Exception e) {
 
     } finally { //데이터 삽입은 무조건 수행
-        NoticeManager noticeManager = new NoticeManager(0);
-        System.out.println("공지번호: "+noticeID);
-        if(noticeID==-1) {
-            if (noticeManager.CreateNotice(memberID, title, content, fileName1)) {
-                out.println("<script>alert('공지사항이 등록되었습니다');location.href='../notice.jsp';</script>");
-            } else {
-                out.println("<script>alert('오류가 발생하였습니다.');history.go(-1);'</script>");
-            }
+        Account account = new Account();
+        if(account.CreateCompany(Name, BusinessNum, BusinessAddr, CenterAddr, Contact, Mail, Password, fileName1)){
+            out.println("<script>alert('회원가입이 완료되었습니다');location.href='../../index.jsp';</script>");
         } else {
-            if (noticeManager.UpdateNotice(noticeID, title, content, fileName1)) {
-                out.println("<script>alert('공지사항이 수정되었습니다');location.href='../notice.jsp';</script>");
-            } else {
-                out.println("<script>alert('오류가 발생하였습니다.');history.go(-1);'</script>");
-            }
+            out.println("<script>alert('오류가 발생하였습니다');history.go(-1);</script>");
         }
-
     }
 %>

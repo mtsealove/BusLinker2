@@ -9,12 +9,12 @@
 <html>
 <head>
     <title>관리자 홈</title>
-    <%@include file="config.jsp" %>
-    <%@include file="check_manager.jsp"%>
+    <%@include file="../config.jsp" %>
+    <%@include file="../check_manager.jsp"%>
 </head>
 <body>
-<%@include file="nav.jsp" %>
-<%@include file="panel.jsp"%>
+<%@include file="../nav.jsp" %>
+<%@include file="../panel.jsp"%>
 <section class="main">
     <div class="card main_div">
         <div class="card-body">
@@ -22,6 +22,6 @@
         </div>
     </div>
 </section>
-<%@include file="footer.jsp"%>
+<%@include file="../footer.jsp"%>
 </body>
 </html>

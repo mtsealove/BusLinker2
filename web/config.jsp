@@ -11,8 +11,16 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <!--ajax-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<link rel="stylesheet" href="Src/Main.css">
-<Link rel="stylesheet" href="Src/Login.css">
+<%
+    //절대경로 이용
+    String root_dir = request.getContextPath();
+    String MainCss = root_dir + "/Src/Main.css";
+    String LoginCss = root_dir + "/Src/Login.css";
+%>
+<link rel="stylesheet" href="<%=MainCss%>">
+<Link rel="stylesheet" href="<%=LoginCss%>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
