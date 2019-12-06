@@ -15,16 +15,6 @@
 
     }
     String uri = request.getRequestURI();
-    String[] sp=uri.split("/");
-    uri=sp[sp.length-1];
-    System.out.println(uri);
-
-    //처음 접속하였을 때 가정
-    try {
-        uri = uri.split("/")[2];
-    } catch (Exception e) {
-        uri = "index.jsp";
-    }
     String dir = request.getContextPath();
     String images = dir + "/images/";
 %>
@@ -144,13 +134,19 @@
         </div>
 
         <div id="inquire_div" class="extend_div">
-            <div class="extend_div_content" data-page="ManagerInquireOwner.jsp"><label class="panel_text">화주사
+            <div class="extend_div_content" data-page="Manager/Inquire/Owner.jsp"><label class="panel_text">화주사
                 조회</label></div>
-            <div class="extend_div_content" data-page="ManagerInquireCompany.jsp"><label class="panel_text">운송사업자
+            <div class="extend_div_content" data-page="Manager/Inquire/Company.jsp"><label class="panel_text">운송사업자
                 조회</label></div>
-            <div class="extend_div_content"><label class="panel_text">조회 등록</label></div>
-            <div class="extend_div_content" data-page="ManagerInquireStaff.jsp"><label class="panel_text">물류관리 직원
+            <div class="extend_div_content"><label class="panel_text">물류센터 조회</label></div>
+            <div class="extend_div_content" data-page="Manager/Inquire/Staff.jsp"><label class="panel_text">물류관리 직원
                 조회</label></div>
+        </div>
+
+        <div class="panel_item panel_m" data-page="Manager/RunInfo.jsp">
+            <div class="indicator"></div>
+            <img class="panel_img" src="<%=images%>setting.png">
+            <label class="panel_text">운행경로</label>
         </div>
         <% } %>
 
