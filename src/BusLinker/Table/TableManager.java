@@ -146,12 +146,39 @@ public class TableManager {
             ppst = connection.prepareStatement(query);
             ResultSet rs = ppst.executeQuery();
             rs.first();
-            result=rs.getInt(1);
+            result = rs.getInt(1);
             rs.close();
             ppst.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
+    }
+
+    //물류센터
+    public ArrayList<Center> getCenters(int page, int sep) {
+        ArrayList<Center> centers = new ArrayList<>();
+        String query = "select * from Center order by Name desc limit ?, ?";
+        try {
+            ppst = connection.prepareStatement(query);
+            ppst.setInt(1, page * sep);
+            ppst.setInt(2, (page + 1) * sep);
+            ResultSet rs = ppst.executeQuery();
+            while (rs.next()) {
+                String name = rs.getString(1);
+                String businessNum = rs.getString(2);
+                String businessAddr = rs.getString(3);
+                String centerAddr = rs.getString(4);
+                String contact = rs.getString(5);
+                String id = rs.getString(6);
+                Center center = new Center(name, businessNum, businessAddr, centerAddr, contact, id);
+                centers.add(center);
+            }
+            rs.close();
+            ppst.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return centers;
     }
 }

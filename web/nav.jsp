@@ -17,7 +17,7 @@
         });
         $('#logout_btn').click(function () {
             if (confirm("로그아웃 하시겠습니까?")) {
-                location.href = "Get/logout.jsp";
+                location.href = "<%=dir_nav%>/Get/logout.jsp";
             }
         })
         $('#toggle_btn').click(function () {

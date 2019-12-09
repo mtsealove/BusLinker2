@@ -3,6 +3,11 @@ body {
     background-color: #F0F0F7;
 }
 
+.timeline_btn {
+    display: inline;
+    width: 49%;
+}
+
 .logo_p {
     display: inline;
     width: 40px;
@@ -11,6 +16,7 @@ body {
     color: white;
     font-size: 20pt;
 }
+
 .main_div {
     position: relative;
 }
@@ -93,6 +99,7 @@ span.more {
 p.notice_line {
     margin: 0px;
 }
+
 p.time {
     color: #3B86FF;
     background-color: #F5F6FA;
@@ -113,6 +120,7 @@ p.time {
     height: 40px;
     padding-left: 30px;
 }
+
 /*
 모바일
  */
@@ -140,6 +148,7 @@ p.time {
         padding: 10px;
         background-color: #E4E4E4;
     }
+
     .bottom_div {
 
     }

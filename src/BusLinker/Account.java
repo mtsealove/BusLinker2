@@ -213,4 +213,26 @@ public class Account {
         }
         return true;
     }
+
+    //물류센터 생성
+    public boolean CreateCenter(String Name, String BusinessNum, String BusinessAddr, String CenterAddr, String Contact, String ID) {
+        String query = "insert into Center set Name=?, BusinessNum=?, BusinessAddr=?, CenterAddr=?, Contact=?, ID=?";
+
+        try {
+            ppst = connection.prepareStatement(query);
+            ppst.setString(1, Name);
+            ppst.setString(2, BusinessNum);
+            ppst.setString(3, BusinessAddr);
+            ppst.setString(4, CenterAddr);
+            ppst.setString(5, Contact);
+            ppst.setString(6, ID);
+
+            ppst.executeUpdate();
+            ppst.close();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

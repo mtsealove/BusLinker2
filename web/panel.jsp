@@ -122,7 +122,7 @@
                 등록</label></div>
             <div class="extend_div_content" data-page="Manager/Register/Company.jsp"><label class="panel_text">운송사업자
                 등록</label></div>
-            <div class="extend_div_content"><label class="panel_text">물류센터 등록</label></div>
+            <div class="extend_div_content" data-page="Manager/Register/Center.jsp"><label class="panel_text">물류센터 등록</label></div>
             <div class="extend_div_content" data-page="Manager/Register/Staff.jsp"><label class="panel_text">물류관리 직원
                 등록</label></div>
         </div>
